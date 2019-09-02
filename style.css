@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+body{
+    overflow: hidden;
+}
+
+#container{
+    width: 90%;
+    height: 90vh;
+    background: lightyellow;
+    margin: 10vh auto;
+}
+
+.activity{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+#scoreboard{ 
+    height: 15vh;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    color:darkorange;
+    
+}
+.scores{
+    width: 30%;
+    border: 2px solid brown;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    border-radius: 10px;
+}
+.ui{
+    width: 30%;
+    height: 30vh;
+    border: 2px solid brown; 
+    border-radius: 10px;  
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.controls{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    color: brown;
+}
+
+.controls:hover, #reset:hover{
+    font-weight: bolder;
+    border: 2px solid brown;
+    cursor: pointer;
+}
+
+#rock, #paper, #scissors{
+    left: -60%;
+}
+
+#rock_0, #paper_1, #scissors_2{
+    display: none;
+    right: -60%;
+}
+
+#paper, #paper_1{
+    top: 70px
+}
+
+#scissors, #scissors_2{
+    top: 145px
+}
+
+#comments{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: absolute;
+    width: 80%;
+    height: 20vh;
+    border: 2px solid brown;
+    bottom: 2%;    
+    margin: 0 3%;
+}
+
+#comments p{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 120%;
+    color:darkgreen;
+}
+
+img{
+    width: 90%;
+}
+#image-1{
+    transform: rotateY(180deg)
+}
+
+#newGame{
+    margin: 0 auto 2.5%;
+    width: 15%;
+    padding-left: 4%;
+}
+#reset{
+    padding: 15%;
+    border-radius: 50%;
+    border: 1px solid brown;  
+    outline: none;
+    color: brown;
+}
+#result{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 46%;
+    left: 46%;
+    text-align: center;
+    font-size: 130%;
+    transform: rotateZ(-45deg);
+}
+
+@media screen and (max-width: 500px){
+    #container{
+    padding-top: 5%;
+    width: 95%;
+    height: 92vh;
+    background: lightyellow;
+    margin: 4vh auto;
+    }
+    #newGame{
+    padding-left: 0;
+    }
+    .activity{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .scores{
+        width: 43%;
+        margin-bottom: 30px;
+        line-height: 1.5em;
+    }
+    .ui{
+        width: 43%;
+        height: 30vh;
+    }
+    .buttons{
+    position: absolute;
+    top: 68vh;
+    flex-direction: row;
+    height: 200px;
+    width: 100%;
+    left: 5%;
+    }
+    .controls{
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+    }
+    #rock, #paper, #scissors{
+        top: -20%;
+    }
+    #rock{
+        left: 0%;
+    }
+    #paper{    
+        left: 31%;
+    }
+    #scissors{ 
+        left: 62%;
+    } 
+    #comments{
+    bottom: 4%;
+    width: 95%; 
+    margin: 0;
+    }
+    #result{
+    width: 50%;
+    height: 10%;
+    top: 40%;
+    left: 29%;
+    transform: rotateZ(270deg);
+    }
+    .ui{
+        display: flex;
+        align-items: center;
+        
+    }
+}
