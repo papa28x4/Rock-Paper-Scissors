@@ -14,7 +14,7 @@ const winningCondition = 10;
 const winPoints = 2;
 const ImageArray = ['rock.png', 'paper.png','scissors.png']
 const numBtn = ImageArray.length
-let action = ['smashes', 'swallows', 'shreds'];
+let action = ['shatters', 'swallows', 'shreds'];
 let playlist = ['rock.wav', 'paper.wav', 'scissors.wav'];
 let scores, gameOver, winningPlayer, index; 
 
