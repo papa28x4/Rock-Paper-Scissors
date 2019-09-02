@@ -37,7 +37,7 @@ window.addEventListener("load", start);
 reset.addEventListener('click', start)
 
 const playAudio =(winningPlayer, choice0, choice1)=>{
-    audio.src = winningPlayer === 1 ? `${imageFolder}`+playlist[ImageArray.indexOf(`${choice1}.png`)] : `${imageFolder}`+playlist[ImageArray.indexOf(`${choice0}.PNG`)]
+    audio.src = winningPlayer === 1 ? `${imageFolder}`+playlist[ImageArray.indexOf(`${choice1}.png`)] : `${imageFolder}`+playlist[ImageArray.indexOf(`${choice0}.png`)]
     audio.play()
 }
 
