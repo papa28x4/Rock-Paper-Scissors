@@ -12,7 +12,7 @@ const imageFolder = "assets/";
 let audio = document.createElement('audio');
 const winningCondition = 10;
 const winPoints = 2;
-const ImageArray = ['rock.PNG', 'paper.PNG','scissors.PNG']
+const ImageArray = ['rock.png', 'paper.png','scissors.png']
 const numBtn = ImageArray.length
 let action = ['smashes', 'swallows', 'shreds'];
 let playlist = ['rock.wav', 'paper.wav', 'scissors.wav'];
@@ -37,7 +37,7 @@ window.addEventListener("load", start);
 reset.addEventListener('click', start)
 
 const playAudio =(winningPlayer, choice0, choice1)=>{
-    audio.src = winningPlayer === 1 ? `${imageFolder}`+playlist[ImageArray.indexOf(`${choice1}.PNG`)] : `${imageFolder}`+playlist[ImageArray.indexOf(`${choice0}.PNG`)]
+    audio.src = winningPlayer === 1 ? `${imageFolder}`+playlist[ImageArray.indexOf(`${choice1}.png`)] : `${imageFolder}`+playlist[ImageArray.indexOf(`${choice0}.PNG`)]
     audio.play()
 }
 
