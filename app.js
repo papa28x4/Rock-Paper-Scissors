@@ -44,7 +44,7 @@ const playAudio =(winningPlayer, choice0, choice1)=>{
 const wins = (choice0, choice1) =>{ 
     winningPlayer = 0;
     playAudio(winningPlayer, choice0, choice1);
-    let fatality = action[ImageArray.indexOf(`${choice0}.PNG`)];
+    let fatality = action[ImageArray.indexOf(`${choice0}.png`)];
     comments.innerHTML = `<p>${choice0} ${fatality} ${choice1}<p><br><p>${players[0].textContent} wins this round<p>`;
     scores[0] += winPoints;
     player1score.innerHTML = `<p>${scores[0]}</p>`
@@ -54,7 +54,7 @@ const wins = (choice0, choice1) =>{
 const loses = (choice0, choice1) =>{
     winningPlayer = 1;
     playAudio(winningPlayer, choice0, choice1);
-    let fatality = action[ImageArray.indexOf(`${choice1}.PNG`)];
+    let fatality = action[ImageArray.indexOf(`${choice1}.png`)];
     comments.innerHTML = `<p>${choice1} ${fatality} ${choice0}<p><br><p>${players[1].textContent} wins this round<p>`
     scores[1] += winPoints;
     player2score.innerHTML = `<p>${scores[1]}</p>`;
@@ -74,7 +74,7 @@ buttonArea.addEventListener('click', (event)=>{
         const choices = [];
         if(event.target.className === 'controls' ){ 
 
-                image1.src = `${imageFolder}${event.target.id}.PNG`
+                image1.src = `${imageFolder}${event.target.id}.png`
                 index = Math.floor(Math.random() * numBtn)
                 image2.src = `${imageFolder}${ImageArray[index]}` 
                 let temp = event.target.id.split('-')
